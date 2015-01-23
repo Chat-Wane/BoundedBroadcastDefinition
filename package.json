@@ -15,6 +15,10 @@
     "dependencies": {
 	"yutils": "0.0.x"
     },
+    "devDependencies":{
+        "expect.js": "0.3.x",
+        "mocha": "2.1.x"
+    },
     "bundledDependencies": [
 	"yutils"
     ],
