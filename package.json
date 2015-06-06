@@ -1,29 +1,20 @@
 {
     "name": "bounded-broadcast-definition",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "author": "Chat-Wane <grumpy.chat.wane@gmail.com>",
-    "description": "Nodejs implementation of the broadcastDefinition interface.",
-    "main": "./index.js",
+    "description": "Broadcasting component relying on a peer provider",
+    "main": "./lib/boundedbroadcast.js",
     "repository": {
-	"type": "git",
-	"url": "https://github.com/chat-wane/BoundedBroadcastDefinition.git"
+        "type": "git",
+        "url": "https://github.com/chat-wane/BoundedBroadcastDefinition.git"
     },
     "keywords": [
-	"broadcast",
+        "broadcast",
         "bounded metadata"
     ],
-    "dependencies": {
-	"yutils": "0.0.x"
+    "scripts":{
+        "debug": "browserify -r ./lib/boundedbroadcast.js:bounded-broacast-definition --debug > build/bounded-broadcast-definition.bundle.debug.js",
+        "build": "browserify -r ./lib/boundedbroadcast.js:bounded-broadcast-definition | uglifyjs > build/bounded-broadcast-definition.bundle.js"
     },
-    "devDependencies":{
-        "expect.js": "0.3.x",
-        "mocha": "2.1.x"
-    },
-    "bundledDependencies": [
-	"yutils"
-    ],
-    "license": "MIT",
-    "engines": {
-	"node": ">=0.10.35"
-    }
+    "license": "MIT"
 }
